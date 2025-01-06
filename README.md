@@ -19,6 +19,15 @@ Linux Wazuh Server installation:
 ```sh
 curl -sO https://packages.wazuh.com/4.9/wazuh-install.sh && sudo bash ./wazuh-install.sh -a
 ```
+## Windows maskinen 
+- Installer Python, husk marker "Add Python to PATH"
+  
+- Aktivere 'Audit Process Creation': 
+Enable Audit Process Creation, i secpol.msc under Security Settings > Advanced Audit Policy Configuration > System Audit Policies - Local Group Policy Object > Detailed Tracking.
+ 
+- Aktivere 'Include Command Line in Process Creation Events': 
+Enable Include Command Line in Process Creation Events, i gpedit.msc under Computer Configuration > Administrative Templates > System > Audit Process Creation.
+
 Windows Wazuh XDR Agent installation:
 
 Kør denne kommando i Powershell med administartor rettigheder.
