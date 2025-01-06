@@ -14,5 +14,8 @@ Windows Wazuh XDR Agent installation:
 Invoke-WebRequest -Uri https://packages.wazuh.com/4.x/windows/wazuh-agent-4.9.2-1.msi -OutFile $env:tmp\wazuh-agent; msiexec.exe /i $env:tmp\wazuh-agent /q WAZUH_MANAGER='Wazuh_Server_IP' WAZUH_AGENT_NAME='Agent_Name'
 ```
 
+## Costum Rules
 
-> Kodeblok
+## Active Response
+
+## Attack Scripts
