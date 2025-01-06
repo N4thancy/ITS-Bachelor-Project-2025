@@ -33,8 +33,21 @@ WAZUH_AGENT_NAME='Agent_Name'
 Invoke-WebRequest -Uri https://packages.wazuh.com/4.x/windows/wazuh-agent-4.9.2-1.msi -OutFile $env:tmp\wazuh-agent; msiexec.exe /i $env:tmp\wazuh-agent /q WAZUH_MANAGER='Wazuh_Server_IP' WAZUH_AGENT_NAME='Agent_Name'
 ```
 
-## Costum Rules
+## Konfiguration
+For at opsætte konfigurationen skal filerne fra mappen "Configuration_files" erstatte, de tilsvarende filer på Wazuh serveren:
+
+Filernes tilhørende mapper:
+```sh
+agent.conf > /var/ossec/etc/shared/default/
+local_rules.xml > /var/ossec/etc/rules/
+ossec.conf > /var/ossec/etc/
+```
 
 ## Active Response
+For at Active Response skal fungerer korrekt, skal følgende filer fra mappen "Active-Response", indsættes på Wazuh agenten:
+```sh
+remove-threat.exe && disable-account.exe > C:\Program Files (x86)\ossec-agent\active-response\bin\
+```
 
 ## Attack Scripts
+
