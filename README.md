@@ -45,6 +45,8 @@ Invoke-WebRequest -Uri https://packages.wazuh.com/4.x/windows/wazuh-agent-4.9.2-
 ## Konfiguration
 For at opsætte konfigurationen skal filerne fra mappen "Configuration_files" erstatte, de tilsvarende filer på Wazuh serveren:
 
+Husk at tilføj eget Virus Total API i ossec.conf. 
+
 Filernes tilhørende mapper:
 ```sh
 agent.conf > /var/ossec/etc/shared/default/
