@@ -46,7 +46,7 @@ ossec.conf > /var/ossec/etc/
 ## Active Response
 For at Active Response skal fungerer korrekt, skal følgende filer fra mappen "Active-Response", indsættes på Wazuh agenten:
 ```sh
-remove-threat.exe && disable-account.exe > C:\Program Files (x86)\ossec-agent\active-response\bin\
+remove-threat.exe & disable-account.exe > C:\Program Files (x86)\ossec-agent\active-response\bin\
 ```
 
 ## Attack Scripts
