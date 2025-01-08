@@ -136,3 +136,15 @@
     <description>Active Response succeeded: Account disabled for net exe.</description>
   </rule>
 </group>
+
+<group name="mimi">  
+  <rule id="100211" level="12">
+    <if_sid>60009</if_sid>
+    <field name="win.eventdata.payload" type="pcre2">(?i)CommandInvocation</field>    
+    <field name="win.system.message" type="pcre2">(?i)Mimikatz</field>
+    <description>Possible Mimikatz activity detected.</description>
+    <mitre>
+      <id>T1059.001</id>
+    </mitre>
+  </rule>
+</group>
