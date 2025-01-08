@@ -33,6 +33,7 @@
   </rule>
 </group>
 
+
 <!-- Brute-Force regel, denne trigger når active response har blokkeret en ip -->
 <group name="Brute-Force Attempt,">
   <rule id="100200" level="12">
@@ -48,6 +49,7 @@
     <description>Active Response succeeded: Block rule deleted for RDP or SSH attack.</description>
   </rule>
 </group>
+
 
 <!-- Regel for Powershell monitorering -->
 <group name="windows,powershell,">
@@ -80,14 +82,7 @@
       <id>T1059.001</id>  
     </mitre>
   </rule>
-  <!--
-  <rule id="100205" level="0">
-    <if_sid>67027</if_sid>
-    <field name="win.eventdata.subjectUserName" type="pcre2">.*\$</field>
-    <description>System account detected, skipping action.</description>
-    <ignore>yes</ignore>
-  </rule>
-  -->
+  
   <rule id="100205" level="0">
     <if_sid>67027</if_sid>
     <field name="win.eventdata.subjectUserName">DESKTOP-1GT2PPK|bdn-admin</field>
@@ -128,6 +123,7 @@
   </rule>
 </group>
 
+
 <!-- Regel for om Net.exe AR har virket -->
 <group name="netexe response">  
   <rule id="100210" level="12">
@@ -136,6 +132,10 @@
     <description>Active Response succeeded: Account disabled for net exe.</description>
   </rule>
 </group>
+
+
+
+<!-- Regel mulig mimikatz aktivitet -->
 
 <group name="mimi">  
   <rule id="100211" level="12">
