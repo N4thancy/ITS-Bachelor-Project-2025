@@ -18,6 +18,7 @@
 
 </group>
 
+
 <!-- Virus Total regler -->
 <group name="virustotal,">
   <rule id="100092" level="12">
@@ -132,7 +133,6 @@
     <description>Active Response succeeded: Account disabled for net exe.</description>
   </rule>
 </group>
-
 
 
 <!-- Regel mulig mimikatz aktivitet -->
