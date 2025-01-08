@@ -34,9 +34,9 @@ Kør denne kommando i Powershell med administartor rettigheder.
 
 Husk at skifte værdierne for følgende placeholders:
 
-WAZUH_MANAGER='Wazuh_Server_IP'
-
-WAZUH_AGENT_NAME='Agent_Name'
+> WAZUH_MANAGER='Wazuh_Server_IP'
+> 
+> WAZUH_AGENT_NAME='Agent_Name'
 
 ```sh
 Invoke-WebRequest -Uri https://packages.wazuh.com/4.x/windows/wazuh-agent-4.9.2-1.msi -OutFile $env:tmp\wazuh-agent; msiexec.exe /i $env:tmp\wazuh-agent /q WAZUH_MANAGER='Wazuh_Server_IP' WAZUH_AGENT_NAME='Agent_Name'
@@ -71,3 +71,29 @@ Det er følgende filer der skal indsættes: (Filerne findes her i mappen "Active
 
 ## Attack Scripts
 
+⚠️ Disclaimer: Disse scripts er oprettet til at genere aktivitet for at teste detektering mulig malicious aktivitet af XDR/AV produkter, det er ikke tilladt at benytte scriptsne til andre formål eller på maskiner uden tilladelse. 
+
+```sh
+tunnelpy
+```
+
+Før eksekvering skal enten ```text.txt``` liggeg i samme sti, ellers kan en anden fil defineres i koden. 
+
+Derudover skal ```DOMAIN```erstattes med det domæne der ønskes at benytte til testen. 
+
+```sh
+keylog.py
+```
+Genere en log.txt fil med det alle optaget key presses. 
+
+```sh
+GodPDF.exe
+```
+Er opsat til kun at encrypte filer på en specific sti ```C:\ransomware-test```. 
+
+Opret denne mappe og indsæt filer for at teste detektering af ransomware.
+
+```sh
+GodPDF.py
+```
+Hvis det ønskes at teste en anden fil sti end ```C:\ransomware-test``` kan dette ændres i python versionen.
