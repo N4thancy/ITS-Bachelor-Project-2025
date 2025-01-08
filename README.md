@@ -71,7 +71,7 @@ Det er følgende filer der skal indsættes: (Filerne findes her i mappen "Active
 
 ## Attack Scripts
 
-⚠️ Disclaimer: Disse scripts er oprettet til at genere aktivitet for at teste detektering mulig malicious aktivitet af XDR/AV produkter, det er ikke tilladt at benytte scriptsne til andre formål eller på maskiner uden tilladelse. 
+⚠️ Disclaimer: Disse scripts er oprettet til at genere aktivitet for at teste detektering af mulig malicious aktivitet, det er ikke tilladt at benytte scriptsne til andre formål eller på maskiner uden tilladelse. 
 
 ```sh
 tunnelpy
