@@ -48,17 +48,26 @@ For at opsætte konfigurationen skal filerne fra mappen "Configuration_files" er
 Husk at tilføj eget Virus Total API i ossec.conf. 
 
 Filernes tilhørende mapper:
-```sh
-agent.conf > /var/ossec/etc/shared/default/
-local_rules.xml > /var/ossec/etc/rules/
-ossec.conf > /var/ossec/etc/
-```
+
+> agent.conf > /var/ossec/etc/shared/default/
+> 
+> local_rules.xml > /var/ossec/etc/rules/
+> 
+> ossec.conf > /var/ossec/etc/
 
 ## Active Response
-For at Active Response skal fungerer korrekt, skal følgende filer fra mappen "Active-Response", indsættes på Wazuh agenten:
+For at kunne eksekvere Active Response scripts til opsatte regler, skal indsættes på scriptsne ligge lokalt på Wazuh agente i følgende fil sti:
+
 ```sh
-remove-threat.exe & disable-account.exe > C:\Program Files (x86)\ossec-agent\active-response\bin\
+C:\Program Files (x86)\ossec-agent\active-response\bin\
 ```
+
+Det er følgende filer der skal indsættes: (Filerne findes her i mappen "Active-Response")
+
+> remove-threat.exe
+> 
+> disable-account.exe
+
 
 ## Attack Scripts
 
